@@ -20,10 +20,13 @@ function frame:RAID_TARGET_UPDATE()
     if GetRaidTargetIndex "player" and UnitInParty "player" then
         SetRaidTarget("player", 0)
         if MarkSilencerDB.mbea then
-            local n = GetNumGroupMembers(LE_PARTY_CATEGORY_INSTANCE)
+            local n = GetNumGroupMembers(LE_PARTY_CATEGORY_INSTANCE) - 1
             shuffle(n)
             for i = 1, n do
-                SetRaidTarget("party" .. i, values[i])
+                local id = "party" .. i
+                SetRaidTarget(id, values[i])
+                local name = GetUnitName(id)
+                SendChatMessage(("%s => {rt%d}"):format(name, i), "INSTANCE_CHAT")
             end
         end
     end
