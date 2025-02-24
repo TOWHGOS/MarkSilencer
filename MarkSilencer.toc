@@ -1,0 +1,8 @@
+## Interface: 110007
+## Title: |cff21e450MarkSilencer|r
+## Version: 0.0.1
+## Author: TOWHGOS
+## SavedVariables: MarkSilencerDB
+## X-Repository: https://github.com/TOWHGOS/MarkSilencer.git
+
+load.lua
