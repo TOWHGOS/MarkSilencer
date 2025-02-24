@@ -24,9 +24,10 @@ function frame:RAID_TARGET_UPDATE()
             shuffle(n)
             for i = 1, n do
                 local id = "party" .. i
-                SetRaidTarget(id, values[i])
+                local icon = values[i]
+                SetRaidTarget(id, icon)
                 local name = GetUnitName(id)
-                SendChatMessage(("%s => {rt%d}"):format(name, i), "INSTANCE_CHAT")
+                SendChatMessage(("%s => {rt%d}"):format(name, icon), "INSTANCE_CHAT")
             end
         end
     end
