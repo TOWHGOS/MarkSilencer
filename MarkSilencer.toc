@@ -1,4 +1,4 @@
-## Interface: 110105
+## Interface: 110107
 ## Title: |cff21e450MarkSilencer|r
 ## Version: 0.0.1
 ## Author: TOWHGOS
